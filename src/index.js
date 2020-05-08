@@ -2,4 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+import { MuiThemeProvider, CssBaseline } from "@material-ui/core";
+import theme from "./theme";
+
+ReactDOM.render(
+  <MuiThemeProvider theme={theme}>
+    <CssBaseline>
+      <App />
+    </CssBaseline>
+  </MuiThemeProvider>,
+  document.getElementById("root")
+);

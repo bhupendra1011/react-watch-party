@@ -8,7 +8,7 @@ function VideoDetails({ video }) {
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
   return (
     <>
-      <Paper elevation={6}>
+      <Paper elevation={6} style={{ height: "70vh" }}>
         <iframe
           frameBorder="0"
           height="100%"
@@ -17,7 +17,7 @@ function VideoDetails({ video }) {
           src={videoSrc}
         />
       </Paper>
-      <Paper elevation={6}>
+      <Paper elevation={6} style={{ padding: "15px" }}>
         <Typography variant="h4">
           {video.snippet.title}- {video.snippet.channelTitle}
         </Typography>
