@@ -8,7 +8,7 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
-    handleSubmit("react");
+    handleSubmit("Yeh aina");
   }, []);
 
   async function handleSubmit(searchTerm) {
@@ -17,7 +17,7 @@ function App() {
         q: searchTerm,
         part: "snippet",
         maxResults: 5,
-        key: "your key", // get own api from https://developers.google.com/youtube/v3
+        key: "AIzaSyAqvOQE2yTP0BvWYpXyIPr2jzXol_hUSHw", // get own api from https://developers.google.com/youtube/v3
       },
     });
     setVideos(repsonse.data.items);

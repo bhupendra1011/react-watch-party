@@ -9,7 +9,7 @@ function VideoItem({ video, onVideoSelect }) {
         onClick={() => onVideoSelect(video)}
       >
         <img
-          style={{ marginRight: "20px" }}
+          style={{ marginRight: "20px", maxWidth: "50%" }}
           alt="thumnbail"
           src={video.snippet.thumbnails.medium.url}
         />
