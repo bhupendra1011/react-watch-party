@@ -11,8 +11,6 @@ function App() {
     handleSubmit("Yeh aina");
   }, []);
 
-  console.log(process.env);
-
   async function handleSubmit(searchTerm) {
     const repsonse = await youtube.get("search", {
       params: {
