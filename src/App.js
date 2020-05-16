@@ -11,13 +11,15 @@ function App() {
     handleSubmit("Yeh aina");
   }, []);
 
+  console.log(process.env);
+
   async function handleSubmit(searchTerm) {
     const repsonse = await youtube.get("search", {
       params: {
         q: searchTerm,
         part: "snippet",
         maxResults: 5,
-        key: "AIzaSyAqvOQE2yTP0BvWYpXyIPr2jzXol_hUSHw", // get own api from https://developers.google.com/youtube/v3
+        key: process.env.REACT_APP_YOUTUBE_KEY, // get own api from https://developers.google.com/youtube/v3
       },
     });
     setVideos(repsonse.data.items);
